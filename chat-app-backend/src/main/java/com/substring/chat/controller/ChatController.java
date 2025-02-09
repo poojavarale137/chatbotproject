@@ -28,7 +28,6 @@ public class ChatController {
 
 		Room room = roomRempository.findById(request.getRoomId())
 				.orElseThrow(() -> new RuntimeException("Room not found"));
-		;
 
 		Message message = new Message();
 		message.setContent(request.getContent());
